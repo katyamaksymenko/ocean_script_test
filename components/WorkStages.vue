@@ -23,7 +23,7 @@
         backgroundImage: `url(${item.bg})`,
         marginTop: index >= 1 && index <= 4 ? '-5%' : '0%',
         zIndex: hoverIndex === index ? '50' : '10',
-        transform: hoverIndex === index ? 'scale(1.05)' : 'scale(1)',
+        transform: hoverIndex === index ? 'scale(1.01)' : 'scale(1)',
         boxShadow: hoverIndex === index ? '0px 15px 40px rgba(0, 0, 0, 0.3)' : 'none'
       }"
       >
