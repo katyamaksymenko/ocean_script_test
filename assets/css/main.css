@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+@import "tailwindcss";
+
+
+.plus-jakarta-sans-services {
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+:root {
+    --hsba-blue: #002C58;
+    --blue: #0043f1;
+    --light-blue: #80A1F8;
+    --black: #000014;
+    --white: #FDFDFD;
+    --white-text: #ffffff;
+    --blue-text: #0044F1;
+    --light-grey: #EAEAEA;
+    --light-grey-60: #F3F3F3;
+    --font-size: 16px;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+html {
+    font-size: 18px;
+}
+button {
+    cursor: pointer;
+}
+h1 {
+    font-size: 444.45%;
+    font-weight: 700;
+}
+h2 {
+    font-size: 388.89%;
+}
+h3 {
+    font-size: 222.23%;
+    font-weight: 700;
+}
+h4 {
+    font-size: 177.78%;
+    font-weight: 700;
+}
+h5 {
+    font-size: 144.45%;
+    font-weight: 600;
+}
+h6 {
+    font-size: 111.12%;
+    font-weight: 600;
+}
+.header NuxtLink {
+    color: var(--white-text);
+}
+

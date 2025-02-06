@@ -1,0 +1,4 @@
+name = "ocean_script"
+account_id = "7fd7a1bf939229992e785c952957d8c72504e"
+compatibility_flags = []
+main = ".output/public"
