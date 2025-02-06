@@ -60,7 +60,7 @@ const submitForm = () => {
               v-model="formData.phone"
               placeholder="Your phone number*" required
               class="w-full p-5
-              text-[--var(white-text)]
+              text-[var(--white-text)]
               transition-all duration-300
               border-1 border-[var(--white-text)]
               placeholder-[var(--white-text)]

@@ -9,4 +9,8 @@ export default <Config>{
         },
     },
     plugins: [],
+    content: [
+        './pages/**/*.{vue,js,ts}',
+        './components/**/*.{vue,js,ts}',
+    ]
 };
