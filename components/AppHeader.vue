@@ -17,6 +17,7 @@ const backgrounds: Record<string, string> = {
   '/about': "/images/about-hero-bg.png",
   '/ai': "/images/ai-hero-bg.png",
   '/bots': "/images/bots-hero-bg.png",
+  '/contacts': "/images/contact-hero-bg.png",
 
 };
 
