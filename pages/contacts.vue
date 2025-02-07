@@ -20,7 +20,7 @@ const scrollToServices = () => {
               bg-cover bg-center
               pb-0
               text-[var(--white-text)]
-              bg-[url('/images/contact-hero-bg.png')]
+              bg-[url('/images/contact-mirror-hero-bg.png')]
               rounded-b-[50px]"
   >
     <section class=" px-[9.8%] ">
