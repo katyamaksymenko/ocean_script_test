@@ -3,10 +3,8 @@
 </script>
 
 <template>
-  <section
-      class="px-[9.8%] py-20
-              flex items-center">
-    <div class="w-[57%] space-y-4.5">
+  <section class="xl:px-[9.8%] px-4 xl:py-20 pt-18 pb-0 flex flex-col-reverse lg:flex-row items-center">
+    <div class="lg:w-[57%] w-[100%] space-y-4.5">
       <h3 class="leading-[50px]">
         Ocean Script: <br>
         Transforming Ideas into Digital Marvels
@@ -28,12 +26,11 @@
           Read More
         </NuxtLink>
       </div>
-
-      <p >
+      <p>
         Caution! This seo text. Be careful!
       </p>
     </div>
-    <img src="/images/description.png" alt="description">
+    <img class="lg:w-[30%] w-full" src="/images/description.png" alt="description">
   </section>
 </template>
 

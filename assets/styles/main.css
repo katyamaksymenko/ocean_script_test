@@ -56,3 +56,25 @@ h6 {
     color: var(--white-text);
 }
 
+@media (max-width: 667px) {
+    html {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 322.005%;
+    }
+    h1 {
+        font-size: 286.005%;
+    }
+    h4 {
+        font-size: 150.45%;
+    }
+    h5 {
+        font-size: 129.00%;
+    }
+    h3 {
+        font-size: 172.001%;
+    }
+
+
+}

@@ -21,6 +21,7 @@ const backgrounds: Record<string, string> = {
 
 };
 
+
 const bgImage = computed(() => backgrounds[route.path] || "/images/default-bg.png");
 defineEmits(['scroll-to-contact']);
 </script>
@@ -28,25 +29,22 @@ defineEmits(['scroll-to-contact']);
 <template>
   <header
       :style="{ backgroundImage: `url(${bgImage})` }"
-      class="
-              bg-cover bg-center
-              px-[9.8%] pb-0
+      class="bg-cover bg-[10%_center] xl:bg-center
+              md:px-[9.8%] px-[1%] pb-0
               text-[var(--white-text)]
-
               rounded-b-[50px]"
   >
-    <nav
-        class="flex
-                items-center justify-between
+    <nav class="flex items-center
+                lg:justify-between
                 py-3"
     >
+      <img class="lg:hidden block" src="/public/images/burger.png" alt="burger">
       <NuxtLink
           to="/"
-          class="text-[1.556rem] mr-24"
-      >
+          class="text-[1.556rem] ml-[28%] lg:ml-0 ">
         Ocean Script
       </NuxtLink>
-      <ul class="flex gap-24 ">
+      <ul class="hidden lg:flex xl:gap-24 gap-4 lg:ml-[6%]">
         <li>
           <NuxtLink
               to="/services"
@@ -69,12 +67,8 @@ defineEmits(['scroll-to-contact']);
           </NuxtLink>
         </li>
       </ul>
-      <div
-          class="flex"
-      >
-        <button
-            class="flex items-center px-5 "
-        >
+      <div class="hidden lg:flex ">
+        <button class="flex items-center px-5 ">
           <img
               class="px-1.5"
               src="/public/images/lang-arrow.png"
@@ -94,12 +88,14 @@ defineEmits(['scroll-to-contact']);
     </nav>
     <section
         :class="route.path === '/'
-             ? 'pt-[23rem]'
+             ? '2xl:pt-[23rem]'
              : ['/services', '/portfolio', '/advertising','/development', '/ai', '/bots', '/design', '/crm', '/about' ].includes(route.path)
-             ? 'pt-[5rem]'
-             : 'pt-[18rem]'"
+             ? 'pt-[5rem] 2xl:pt-[2rem]'
+             : 'pt-[18rem] 2xl:pt-[5rem]'"
         class="hero
-                w-[45rem]
+                2xl:w-[53%]
+                xl:mt-0 mt-44
+                w-[90%]
                 m-auto
                 text-center">
       <LightButton>
@@ -112,16 +108,15 @@ defineEmits(['scroll-to-contact']);
       <h2
           class="mt-4.5
           font-extrabold
-          leading-[88.2px]"
+          md:leading-[88.2px] leading-[56.7px]"
       >
         <slot name="hero-title" />
       </h2>
       <p
-        class="pt-4 pb-6"
+        class="pt-6 pb-6"
       >
         <slot name="hero-slogan"/>
       </p>
-
       <slot />
     </section>
   </header>

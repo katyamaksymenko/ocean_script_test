@@ -33,22 +33,23 @@ const plans = ref([
 
 <template>
   <section class="pains
-                  mx-[9.8%]
+                  lg:mx-[9.8%]
+                  mx-[2%]
                   text-[var(--black)]
-                  py-32 "
+                  lg:py-32 py-20"
   >
     <div
-        class="flex justify-between pb-4">
+        class="flex flex-col-reverse lg:flex-row
+              lg:items-center justify-between pb-4">
       <h4>
         Customer pains
       </h4>
       <button
-        class="rounded-[90px] border-1 px-[1rem] h-[42px]">
+        class="rounded-[90px] border-1 px-[1rem] lg:h-[42px] w-[71px] h-[38px] lg:w-[81px] lg:mb-0 mb-2">
         Pains
       </button>
     </div>
-    <div
-        class="flex">
+    <div class="xl:flex flex-row ">
       <picture class="w-[30%]">
         <source
             srcset="/images/pain.png"
@@ -61,27 +62,27 @@ const plans = ref([
             alt="Pain image">
       </picture>
       <div
-          class="w-[70%]"
+          class="lg:w-[70%] w-[100%]"
       >
         <ul
             v-for="(item, index) in plans"
             :key="index"
         >
           <li
-              class="mb-4 py-3
-                    flex items-center
+              class="mb-4 py-3 px-4
+                    flex lg:flex-row flex-col lg:items-center
                     bg-[url('/images/pains.png')]
                     bg-cover bg-[50%_22%]
                     rounded-[20px] "
           >
-            <div class="w-[40%] mr-2">
+            <div class="lg:w-[40%] ">
               <p class="text-[var(--blue-text)] pb-2">
                 {{ item.number }}
               </p>
               <h5>{{ item.title }}</h5>
             </div>
 
-            <div class="w-[55%]">
+            <div class="lg:w-[55%]">
               <p>{{ item.text }}</p>
             </div>
           </li>
@@ -93,5 +94,6 @@ const plans = ref([
 </template>
 
 <style scoped>
+
 
 </style>

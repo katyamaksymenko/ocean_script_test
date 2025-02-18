@@ -19,11 +19,12 @@ const submitForm = () => {
   <section
       class="text-[var(--white-text)]
               relative
+              overflow-hidden
               bg-[var(--black)]
-              px-[9.8%] py-16
+              xl:px-[9.8%] px-4 lg:py-16 pt-16 pb-20
               rounded-[40px]
-              flex items-center">
-    <div class="w-[36%]">
+              xl:flex xl:flex-row flex-col items-center ">
+    <div class="xl:w-[36%] w-full">
       <NuxtLink to="/contacts">
         <LightButton>
           <template v-slot:button-name>
@@ -31,21 +32,23 @@ const submitForm = () => {
           </template>
         </LightButton>
       </NuxtLink>
-      <h3 class="leading-[50px] mt-6">
+      <h3 class="xl:leading-[50px] leading-[30px] mt-6">
         Let's discuss your tasks. Contact today!
       </h3>
     </div>
-    <img class="absolute right-0" src="/images/form-img.png" alt="cristal">
-    <img class="absolute top-0" src="/images/form-imgs.png" alt="cristal">
+    <img class="md:block hidden absolute right-0 " src="/images/form-img.png" alt="cristal">
+    <img class="md:block hidden absolute top-0 " src="/images/form-imgs.png" alt="cristal">
+    <img class="md:hidden block w-[172px] absolute xl:bottom-40 top-180  right-6 " src="/images/form-img.png" alt="cristal">
+    <img class="md:hidden block w-[181px] absolute right-0 top-0" src="/images/form-imgs.png" alt="cristal">
     <div>
       <form @submit.prevent="submitForm"
-            class="w-[37.5rem] space-y-4.5">
+            class="xl:w-[104%] w-full space-y-4.5 mt-8 xl:mt-0">
         <div class="relative">
           <input
               type="text"
               v-model="formData.name"
               placeholder="Your name*" required
-              class="w-full p-5
+              class="w-[100%] p-5 mb-1 lg:mb-0
               text-white
               transition-all duration-300
               border-1 border-[var(--white-text)]
@@ -59,7 +62,7 @@ const submitForm = () => {
               type="tel"
               v-model="formData.phone"
               placeholder="Your phone number*" required
-              class="w-full p-5
+              class="w-[100%] p-5 mb-1 lg:mb-0
               text-[var(--white-text)]
               transition-all duration-300
               border-1 border-[var(--white-text)]
@@ -73,7 +76,7 @@ const submitForm = () => {
               type="email"
               v-model="formData.email"
               placeholder="Your email*" required
-              class="w-full p-5
+              class="w-[100%] p-5 mb-1 lg:mb-0
               text-white
               transition-all duration-300
               border-1 border-[var(--white-text)]
@@ -85,7 +88,7 @@ const submitForm = () => {
         <div class="relative">
           <select
               v-model="formData.service" required
-              class="w-full p-5
+              class="w-[100%] p-5 mb-1 lg:mb-0
               text-white
               transition-all duration-300
               border-1 border-[var(--white-text)]
@@ -104,7 +107,7 @@ const submitForm = () => {
         </div>
         <div class="relative">
           <select v-model="formData.budget" required
-                  class="w-full p-5
+                  class="w-[100%] p-5 mb-1 lg:mb-0
                   text-white
                   transition-all duration-300
                   border-1
@@ -119,11 +122,12 @@ const submitForm = () => {
             <option value="$5,000+">$5,000+</option>
           </select>
         </div>
-        <div class="flex gap-4">
+        <div class="xl:flex flex-col gap-4">
           <button
               type="submit"
               class="flex items-center
-                     pl-[4rem] pr-[5.755rem] py-[1.115rem]
+                     px-32
+                     xl:pl-[4rem] xl:pr-[5.755rem] py-[1.115rem]
                      bg-[var(--blue)]
                      rounded-[90px]
                      hover:shadow-[6px_6px_6px_rgba(255,255,255,0.2)]

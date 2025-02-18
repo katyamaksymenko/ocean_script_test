@@ -4,17 +4,18 @@
 
 <template>
   <footer
-
       class="bg-[url('/images/stages.png')]
          bg-cover bg-[center_50%]
-         flex gap-36 px-[9.8%] py-16 "
+         md:flex flex-row
+         xl:space-x-40 space-x-16
+         xl:px-[9.8%] px-6 py-16 "
   >
-    <section class="footer-block w-[230px] space-y-4">
+    <section class="footer-block xl:w-[230px] w-full space-y-4">
       <h4 class="text-3xl">Ocean Script</h4>
       <p>Lorem ipsum dolor sit amet consectetur. Tellus massa vehicula condimentum ut feugiat volutpat sed.</p>
     </section>
 
-    <nav class="footer-block space-y-2">
+    <nav class="xl:mt-0 mt-8 footer-block space-y-2">
       <h6>Navigation</h6>
       <ul class="space-y-3">
         <li><NuxtLink to="/">Cases</NuxtLink></li>
@@ -24,7 +25,7 @@
       </ul>
     </nav>
 
-    <nav class="footer-block space-y-2">
+    <nav class="xl:mt-0 mt-8 footer-block space-y-2">
       <h6>Services</h6>
       <ul class="space-y-2.5">
         <li><NuxtLink to="/development">Web development</NuxtLink></li>
@@ -36,7 +37,7 @@
       </ul>
     </nav>
 
-    <section class="footer-block space-y-4">
+    <section class="xl:mt-0 mt-8 footer-block space-y-4">
       <h6>Contacts</h6>
       <address class="space-y-4">
         <p class="flex">
@@ -47,7 +48,7 @@
           <img class="mr-2 cursor-pointer" src="/images/phone.svg" alt="phone">
           <a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
         </p>
-        <div class="flex space-x-6">
+        <div class="xl:mt-0 mt-8 flex space-x-6">
           <img class="cursor-pointer" src="/images/insta.png" alt="instagram">
           <img class="cursor-pointer" src="/images/in.png" alt="in">
           <img class="cursor-pointer" src="/images/telegram.png" alt="telegram">

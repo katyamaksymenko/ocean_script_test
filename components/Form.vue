@@ -21,8 +21,8 @@ const submitForm = () => {
               relative
               py-16
               rounded-[40px]
-              flex items-center">
-    <div class="w-[64%] pl-[9.8%] " >
+              xl:flex flex-row items-center">
+    <div class="xl:w-[64%] xl:pl-[9.8%] pl-[16%] w-[94%]" >
       <NuxtLink to="/contacts">
         <LightButton>
           <template v-slot:button-name>
@@ -34,11 +34,11 @@ const submitForm = () => {
         Let's discuss your tasks. Contact today!
       </h3>
     </div>
-    <img class="absolute top-0" src="/images/contacts1.png" alt="cristal">
+    <img class="absolute top-0 opacity-0 xl:opacity-100" src="/images/contacts1.png" alt="cristal">
     <img class="absolute right-0" src="/images/contacts2.png" alt="cristal">
-    <div class="pr-[9.8%]">
+    <div class="mr-[9.8%] pl-[20%] xl:p-0 pt-10">
       <form @submit.prevent="submitForm"
-            class="w-[34.5rem] space-y-4.5 ">
+            class="w-[34.5rem] space-y-5 ">
         <div class="relative">
           <input
               type="text"

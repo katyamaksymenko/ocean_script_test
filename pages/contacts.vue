@@ -1,17 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import ActionButton from "~/components/ActionButton.vue";
 
-const contactForm = ref(null);
-const servicesSection = ref(null);
-
-const scrollToContact = () => {
-  contactForm.value?.$el.scrollIntoView({ behavior: 'smooth' });
-};
-
-const scrollToServices = () => {
-  servicesSection.value?.$el.scrollIntoView({ behavior: 'smooth' });
-};
 </script>
 
 <template>
@@ -84,5 +73,6 @@ const scrollToServices = () => {
     </section>
     <Form />
   </header>
+  <FindUs />
 
 </template>

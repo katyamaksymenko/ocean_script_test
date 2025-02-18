@@ -1,48 +1,14 @@
 <script setup>
-import {ref} from "vue";
-
-const services = ref([
-  {
-    title: 'Online stores',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/development',
-    price: '2000$'
-  },
-  {
-    title: 'Landing pages',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/design',
-    price: '2000$'
-  },
-  {
-    title: 'Corporate websites',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/advertising',
-    price: '2000$'
-  },
-  {
-    title: 'Online stores',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/crm',
-    price: '2000$'
-  },
-  {
-    title: 'Landing pages',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/ai',
-    price: '2000$'
-  },
-  {
-    title: 'Corporate websites',
-    text: 'Lorem ipsum dolor sit amet consectetur. Viverra est eget ut ipsum vulputate adipiscing condimentum.',
-    route: '/bots',
-    price: '2000$'
-  },
-
-])
+import {defineProps, ref} from "vue";
 
 const hoverIndex = ref(null);
 defineEmits(['scroll-to-contact']);
+const props = defineProps({
+  services: {
+    type: Array,
+    default: () => []
+  }
+});
 
 </script>
 
@@ -69,10 +35,8 @@ defineEmits(['scroll-to-contact']);
         </LightButton>
       </NuxtLink>
     </div>
+    <div class="flex flex-cols-1 sm:flex-cols-2 lg:flex-cols-3 flex-wrap justify-between xl:justify-around">
     <div
-        class="services-items flex flex-wrap  gap-4"
-    >
-      <div
           v-for="(item, index) in services"
           :key="index"
           @mouseenter="hoverIndex = index"
@@ -85,55 +49,54 @@ defineEmits(['scroll-to-contact']);
             bg-cover bg-center
             overflow-hidden"
       >
-        <div
-            class="absolute inset-0
-              bg-[url('/images/pains.png')]
-              bg-cover bg-center
-              opacity-0
-              translate-y-full
-              group-hover:opacity-100
-              group-hover:translate-y-0
-              transition-all duration-500 ease-in-out z-0"
-        ></div>
-        <div class="relative z-10 group
-                    group-hover:text-[var(--black)]
-                    transition-all duration-400">
-          <h4
-              class="relative flex items-center z-10"
+          <div
+              class="absolute inset-0
+                bg-[url('/images/pains.png')]
+                bg-cover bg-center
+                opacity-0
+                translate-y-full
+                group-hover:opacity-100
+                group-hover:translate-y-0
+                transition-all duration-500 ease-in-out z-0"
           >
-            {{ item.title }}
-          </h4>
-          <p class="pt-4 pb-34">
-            {{ item.text }}
-          </p>
-          <div class="flex items-center justify-between">
-            <NuxtLink :to="item.route">
-              <button
-                  class="flex items-center
-                         px-[1.685rem] py-[0.855rem]
-                         bg-[var(--blue-text)] rounded-[90px]
-                         group-hover:text-[var(--white)]
-                         transition-all duration-400"
+          </div>
+          <div class="relative z-10 group
+                      group-hover:text-[var(--black)]
+                      transition-all duration-400">
+              <h4
+                  class="relative flex items-center z-10"
               >
-                Learn more
-                <img
-                    src="/images/learn-arrow.png"
-                    alt="arrow"
-                    class="ml-4 transition-all duration-400"
-                >
-              </button>
-            </NuxtLink>
-            <div>
-              from
-              <span class="text-[var(--blue)]">
-                {{ item.price }}
-              </span>
+                {{ item.title }}
+              </h4>
+              <p class="pt-4 pb-34">
+                {{ item.text }}
+              </p>
+              <div class="flex items-center justify-between">
+                <NuxtLink :to="item.route">
+                  <button
+                      class="flex items-center
+                             px-[1.685rem] py-[0.855rem]
+                             bg-[var(--blue-text)] rounded-[90px]
+                             group-hover:text-[var(--white)]
+                             transition-all duration-400"
+                  >
+                    Learn more
+                    <img
+                        src="/images/learn-arrow.png"
+                        alt="arrow"
+                        class="ml-4 transition-all duration-400"
+                    >
+                  </button>
+                </NuxtLink>
+                <div>
+                from
+                <span class="text-[var(--blue)]">
+                  {{ item.price }}
+                </span>
+              </div>
             </div>
           </div>
-
         </div>
-
-      </div>
     </div>
     <ActionButton
         @click="$emit('scroll-to-contact')"

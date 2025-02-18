@@ -6,7 +6,7 @@
   <button
       type="submit"
       class="flex items-center
-             px-[3.67rem] py-[1.115rem]
+             lg:px-[6%] px-[30%] py-[1.115rem]
              bg-[var(--blue)] rounded-[90px]"
   >
     <img

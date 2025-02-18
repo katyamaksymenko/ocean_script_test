@@ -21,8 +21,13 @@
     <Statistics />
   </AppHeader>
   <CustomersPains />
-  <Services ref="servicesSection" @scroll-to-contact="scrollToContact"></Services>
-  <Portfolio @scroll-to-contact="scrollToContact" class="pt-24">
+  <Services
+      ref="servicesSection"
+      @scroll-to-contact="scrollToContact">
+  </Services>
+  <Portfolio
+      @scroll-to-contact="scrollToContact"
+      class="pt-24">
     <template v-slot:title> Our latest works</template>
     <template v-slot:btn>
       <NuxtLink to="/portfolio">

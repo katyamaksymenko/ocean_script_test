@@ -1,14 +1,21 @@
 <template>
   <section
-      class="statistics flex gap-30 pb-25"
+      class="statistics flex justify-between pb-25"
   >
     <div
         v-for="(item, index) in statistics"
         :key="index"
-        class="flex flex-col items-start"
+        class="flex flex-col items-start lg:w-[20%] w-[26%]"
     >
       <h1 class="">{{ item.number }}</h1>
-      <p class="">{{ item.paragraph }}</p>
+      <p class="text-left">
+        <template v-if="index === 2">
+          professionals <span class="md:hidden inline">in our team</span>
+        </template>
+        <template v-else>
+          {{ item.paragraph }}
+        </template>
+      </p>
     </div>
   </section>
 </template>

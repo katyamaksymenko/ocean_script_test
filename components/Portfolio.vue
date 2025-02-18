@@ -8,14 +8,15 @@ defineProps({
 </script>
 
 <template>
-  <section class="portfolio mx-[9.8%] pb-24">
+  <section class="portfolio xl:mx-[9.8%] mx-4 pb-24">
     <div>
       <div
-          class="flex items-center justify-between pb-8">
-        <h3>
-            <slot name="title"></slot>
+          class="flex flex-col-reverse lg:flex-row
+                  lg:items-center justify-between pb-8">
+        <h3 class="mt-2 lg:mt-0" >
+            <slot name="title" ></slot>
         </h3>
-        <slot name="btn"></slot>
+        <slot name="btn" ></slot>
       </div>
       <div
           class="portfolio-works
@@ -25,18 +26,24 @@ defineProps({
                   bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('/images/work1.png')]
                   bg-cover bg-center
                   rounded-[40px]
-                  px-9 py-8 w-[48.59%]"
+                  px-9 py-8 xl:w-[48.59%] w-[100%]"
         >
-          <div class="flex gap-3">
-            <LightButton>
-              <template v-slot:button-name>Online store</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web Design</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web development</template>
-            </LightButton>
+          <div class="flex xl:flex-row flex-col gap-3">
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Online store</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web Design</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web development</template>
+              </LightButton>
+            </div>
           </div>
           <h4 class="pt-96">
             Clothes Marketplace
@@ -48,18 +55,24 @@ defineProps({
             class="work
                     bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('/images/work2.png')]
                     bg-cover bg-center
-                    rounded-[40px] px-9 py-8 w-[48.59%]"
+                    rounded-[40px] px-9 py-8 xl:w-[48.59%] w-[100%]"
         >
-          <div class="flex gap-3">
-            <LightButton>
-              <template v-slot:button-name>Online store</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web Design</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web development</template>
-            </LightButton>
+          <div class="flex xl:flex-row flex-col gap-3">
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Online store</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web Design</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web development</template>
+              </LightButton>
+            </div>
           </div>
           <h4 class="pt-96">
             Clothes Marketplace
@@ -71,17 +84,23 @@ defineProps({
             class="work
                   bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('/images/work3.png')]
                   bg-cover bg-center px-9 py-8
-                  w-[48.59%] rounded-[42px] ">
-          <div class="flex gap-3">
-            <LightButton>
-              <template v-slot:button-name>Online store</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web Design</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web development</template>
-            </LightButton>
+                  xl:w-[48.59%] w-[100%] rounded-[42px] ">
+          <div class="flex xl:flex-row flex-col gap-3">
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Online store</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web Design</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web development</template>
+              </LightButton>
+            </div>
           </div>
           <h5 class="pt-96">
             Clothes Marketplace
@@ -93,17 +112,23 @@ defineProps({
             class="work
             bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('/images/work4.png')]
             bg-cover bg-center
-            rounded-[40px] px-9 py-8 w-[48.59%]">
-          <div class="flex gap-3">
-            <LightButton>
-              <template v-slot:button-name>Online store</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web Design</template>
-            </LightButton>
-            <LightButton>
-              <template v-slot:button-name>Web development</template>
-            </LightButton>
+            rounded-[40px] px-9 py-8 xl:w-[48.59%] w-[100%]">
+          <div class="flex xl:flex-row flex-col gap-3">
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Online store</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web Design</template>
+              </LightButton>
+            </div>
+            <div>
+              <LightButton>
+                <template v-slot:button-name>Web development</template>
+              </LightButton>
+            </div>
           </div>
           <h4 class="pt-96">
             Clothes Marketplace
@@ -118,7 +143,7 @@ defineProps({
         :class="centerButton ? 'mx-auto' : 'ml-0'"
         class="text-[var(--white-text)] mt-12"
     >
-      Send request
+      Learn more
     </ActionButton>
   </section>
 </template>

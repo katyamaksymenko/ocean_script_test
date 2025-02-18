@@ -50,17 +50,19 @@ const hoverIndex = ref(null);
   <section
       class="px-[9.8%] py-32"
   >
+    <div class="services-items grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
     <div
-        class="services-items flex flex-wrap  gap-6"
-    >
-      <div
           v-for="(item, index) in services"
           :key="index"
           @mouseenter="hoverIndex = index"
           @mouseleave="hoverIndex = null"
-          class="relative group bg-[url('/images/services-page.png')]
-         cursor-pointer rounded-[20px] w-[27rem] p-5 z-10
-         bg-cover bg-center overflow-hidden"
+          class="flex
+            relative group bg-[url('/images/services-page.png')]
+             cursor-pointer rounded-[20px]
+             p-5 z-10
+             bg-cover bg-center overflow-hidden"
       >
         <div class="relative z-10">
           <h4 class="before:content-['•'] before:mr-4">

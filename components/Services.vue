@@ -41,23 +41,22 @@ defineEmits(['scroll-to-contact']);
 const isHovered = ref(false);
 
 </script>
-
 <template>
   <section
-      class="px-[9.8%] pb-10
+      class="xl:px-[9.8%] px-4 pb-10
             bg-[var(--black)] rounded-[40px]
             text-[var(--white-text)]"
   >
     <div
-        class="flex
-                justify-between items-center
+        class="flex flex-col-reverse lg:flex-row
+                justify-between lg:items-center
                 mb-4
                 pt-12"
     >
       <h3>
         Services
       </h3>
-      <NuxtLink to="/services">
+      <NuxtLink to="/services" class="mb-2 lg:mb-0">
         <LightButton>
           <template v-slot:button-name>
             Our services
@@ -66,18 +65,18 @@ const isHovered = ref(false);
       </NuxtLink>
     </div>
     <div
-        class="services-items flex flex-wrap  gap-4"
+        class="services-items flex flex-wrap justify-between"
     >
         <div
             v-for="(item, index) in services"
             :key="index"
             @mouseenter="hoverIndex = index"
             @mouseleave="hoverIndex = null"
-            class="relative group
+            class="xl:w-[calc(33.1%-20px)]
+            relative group
             cursor-pointer border
             rounded-[20px]
-            w-[27rem]
-            p-5 z-10 mb-6
+            p-5 z-10 mb-[4%]
             bg-cover bg-center
             overflow-hidden"
         >
@@ -92,18 +91,20 @@ const isHovered = ref(false);
               transition-all duration-500 ease-in-out z-0"
           ></div>
           <div class="relative z-10 group">
-            <h4
-                class="relative flex items-center z-10"
-            >
-              <span class="w-[9px] h-[9px] bg-[var(--white-text)] mr-4 before:bg-[var(--white-text)] rounded-full  before:mr-4"></span>
+            <h4 class="relative flex items-center z-10">
+              <span class="w-[9px] h-[9px]
+                          bg-[var(--white-text)] mr-4
+                          before:bg-[var(--white-text)]
+                          rounded-full  before:mr-4">
+              </span>
               {{ item.title }}
             </h4>
-            <p class="pt-4 pb-34">
+            <p class="pt-4 pb-20 md:pb-34">
               {{ item.text }}
             </p>
             <NuxtLink :to="item.route">
               <button
-                  class="flex items-center
+                  class="hidden md:flex items-center
                          px-[1.685rem] py-[0.855rem]
                          bg-[var(--blue-text)] rounded-[90px]
                          group-hover:bg-[var(--white-text)]
@@ -129,13 +130,14 @@ const isHovered = ref(false);
     </div>
     <ActionButton
         @click="$emit('scroll-to-contact')"
-        class=" mx-auto mt-4">
+        class="mx-auto mt-4">
       Send request
     </ActionButton>
   </section>
 
 </template>
 
-<style scoped>
+<style >
+
 
 </style>
